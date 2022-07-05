@@ -1,0 +1,12 @@
+
+<h2> Post Name: <%= @post.name %> </h2>
+<h2> Post Description: <%= @post.description %> </h2>
+<%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
+
+
+<div>
+  <%= link_to "Edit this post", edit_post_path(@post) %> |
+  <%= link_to "Back to posts", posts_path %>
+
+  <%= button_to "Destroy this post", @post, method: :delete %>
+</div>
